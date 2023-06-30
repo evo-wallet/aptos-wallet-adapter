@@ -11,6 +11,7 @@ import { TokenPocketWallet } from "@tp-lab/aptos-wallet-adapter";
 import { TrustWallet } from "@trustwallet/aptos-wallet-adapter";
 import { MSafeWalletAdapter } from "msafe-plugin-wallet-adapter";
 import { WelldoneWallet } from "@welldone-studio/aptos-wallet-adapter";
+import { EvoWallet } from "@evo-wallet/wallet-adapter";
 import {
   AptosWalletAdapterProvider,
   NetworkName,
@@ -44,6 +45,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     new TokenPocketWallet(),
     new TrustWallet(),
     new WelldoneWallet(),
+    new EvoWallet(),
   ];
 
   return (
